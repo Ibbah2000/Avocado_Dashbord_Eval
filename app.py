@@ -1,5 +1,3 @@
-
-
 import dash
 from dash import Dash, html
 import dash_bootstrap_components as dbc
@@ -31,6 +29,9 @@ app.layout = html.Div([
     navbar,
     dash.page_container,
 ])
+
+# Import des callbacks APRES la création de l'app
+from pages import page1_cb  # noqa: E402
 
 if __name__ == "__main__":
     app.run(debug=True)

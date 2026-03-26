@@ -12,7 +12,9 @@ import pandas as pd
 dash.register_page(__name__, path="/", name="Comparaison entre région")
 
 # Chargement des données
-df = pd.read_csv("datas/avocado.csv")
+import os
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+df = pd.read_csv(os.path.join(BASE_DIR, "datas", "avocado.csv"))
 
 # Régions fixes du premier graphique
 REGIONS_FIXES = ["MidSouth", "Northeast", "SouthCentral", "Southeast", "TotalUS", "West"]
