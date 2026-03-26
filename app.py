@@ -31,7 +31,7 @@ app.layout = html.Div([
 ])
 
 # Import des callbacks APRES la création de l'app
-from pages import page1_cb  # noqa: E402
+from pages import page1_cb ,  page2_cb
 
 if __name__ == "__main__":
     app.run(debug=True)
